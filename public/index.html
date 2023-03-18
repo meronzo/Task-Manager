@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="ja">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+    <!--    Google Font     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <!--    FontAwesome     -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+</head>
+
+<body>
+    <div class="Interface">
+        <div class="Header">
+            <span class="HeaderTitle">Task Manager</span>
+        </div>
+        <article class="TasksContainer">
+            <section class="Task">
+                <article class="TaskHeader TaskChild">
+                    <div class="TaskIcon">
+                        <span class="Triangle">▶</span>
+                    </div>
+                    <h3 class="TaskTitle">This is test</h3>
+                    <h4 class="TaskDate">2/12</h4>
+                </article>
+                <article class="TaskContent">
+                    <article class="TaskExplanation TaskChild">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur culpa nobis
+                        doloribus
+                        quos, aspernatur beatae exercitationem numquam quibusdam et dolore molestiae? Eveniet similique
+                        possimus
+                        distinctio non deserunt excepturi necessitatibus.
+                    </article>
+                    <div class="TaskCommands TaskChild">
+                        <button><i class="fa-solid fa-pen"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </article>
+            </section>
+
+            <section class="Task">
+                <article class="TaskHeader TaskChild">
+                    <div class="TaskIcon">
+                        <span class="Triangle">▶</span>
+                    </div>
+                    <h3 class="TaskTitle">Second Header</h3>
+                    <h4 class="TaskDate">2/12</h4>
+                </article>
+                <article class="TaskContent">
+                    <article class="TaskExplanation TaskChild">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur culpa nobis
+                        doloribus
+                        quos, aspernatur beatae exercitationem numquam quibusdam et dolore molestiae? Eveniet similique
+                        possimus
+                        distinctio non deserunt excepturi necessitatibus.
+                    </article>
+                    <div class="TaskCommands TaskChild">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </article>
+            </section>
+        </article>
+    </div>
+    
+    
+    <button class="AddTaskButton" onClick="ToggleInputInterface()">＋</button>
+
+    <div class="InputInterface">
+        <div class="InputToolbar">
+            <button onclick="ToggleInputInterface()" class="InputClose">Close</button>
+            <button onclick="ToggleInputInterface()" type="submit" class="InputSave" form="Form">Save</button>
+        </div>
+        <form class="InputForm" id="Form">
+            <input class="InputChild" id="Title" placeholder="Title:">
+            <input class="InputChild" id="Month" type="number" min="1" max="12" placeholder="Month:">
+            <input class="InputChild" id="Date" type="number" min="1" max="31" placeholder="Date:">
+            <textarea class="InputChild" id="Content" placeholder="Type some explanation.."></textarea>
+        </form>
+    </div>
+    <!--
+    <div class="UserMask"></div>
+    -->
+
+    <!-- Axios API  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/db1e596adb.js" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

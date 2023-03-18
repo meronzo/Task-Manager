@@ -1,0 +1,244 @@
+:root{
+    --HeaderBgColor:rgb(255, 197, 197);
+    --HeaderTextColor: rgb(44, 44, 44);
+    --HeaderCommandColor: white;
+    --HeaderCommandColorHover: rgb(223, 223, 223);
+    --HeaderCommandColorActive: rgb(218, 209, 215);
+    --TaskHeight: 68px;
+    --TaskWidth: 282px;
+    --TaskBorderColor: black;
+    --TaskSegregatorColor: gray;
+    --TaskBgColor: white;
+    --TaskTextColor: black;
+    --TaskCommandBgColor: rgb(172, 70, 70);
+    --TaskCommnadBgColorHover: rgb(138, 56, 81);
+    --TaskCommandTextColor: white;
+    --AddTaskTextColor: white;
+    --AddTaskBgColor: rgb(255, 197, 197);
+    --AddTaskBorderColor: rgb(206, 128, 128);
+    --MaskColor: rgba(0, 0, 0, 0.6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+ul{
+    font-size: 0;
+}
+li{
+    list-style: none;
+}
+a:visited{
+    color: black;
+}
+button, input, textarea{
+    outline: none;
+    border: none;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.Interface{
+    height: auto;
+    width: 100vw;
+    margin: auto;
+}
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 6px;
+    height: 60px;
+    background-color: var(--HeaderBgColor);
+}
+.HeaderTitle{
+    font-size: 22px;
+    color: var(--HeaderTextColor);
+}
+.AddTaskButton{
+    position: absolute;
+    bottom: 32px;
+    right: 14px;
+    font-size: 42px;
+    font-weight: lighter;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--AddTaskTextColor);
+    background-color: var(--AddTaskBgColor);
+}
+.AddTaskButton:hover{
+    background-color: var(--HeaderCommandColorHover);
+}
+.AddTaskButton:active{
+    background-color: var(--HeaderCommandColorActive);
+}
+.TasksContainer{
+    height: 500px;
+    width: 100vw;
+    padding: 12px 0;
+    overflow-y: scroll;
+}
+
+
+.Task{
+    margin: auto;
+    margin-bottom: 4px;
+    max-height: var(--TaskHeight);
+    width: var(--TaskWidth);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--TaskHeight) 1fr;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+.LengthenHeight{
+    max-height: 100vh !important;
+}
+.TaskHeader{
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 42px 1fr 30px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid var(--TaskBorderColor);
+}
+.TaskHeader *{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.TaskIcon{
+    background-color: paleturquoise;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.Triangle{
+    justify-content: center;
+    transition: all 0.2s;
+}
+.RotateTriangle{
+    transform: rotate(90deg);
+}
+.TaskTitle{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 12px;
+    font-size: 22px;
+}
+.TaskDate{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-items: end;
+}
+
+
+.TaskContent{
+    grid-column: 1;
+    grid-row: 2/4;
+    padding: 4px 6px;
+    border: 1px solid var(--TaskBorderColor);
+    border-top: none;
+    transition: all 0.4s;
+}
+.TaskChild + .TaskChild{
+    border-top: 1px solid gray;
+}
+.TaskExplanation{
+    font-size: 18px;
+    width: 100%;
+    padding: 4px 0;
+}
+.TaskCommands{
+    padding: 4px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.TaskCommands button{
+    height: 28px;
+    width: 28px;
+    margin: 2px;
+    font-size: 16px;
+    border: 1px var(--TaskBorderColor) solid;
+    border-radius: 2px;
+    background-color: var(--TaskCommandBgColor);
+    color: var(--TaskCommandTextColor);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.TaskCommands button:hover{
+    background-color: var(--TaskCommnadBgColorHover);
+}
+
+
+.InputInterface{
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 0.3s;
+}
+.InputInterfaceActive{
+    left: 0 !important;
+}
+.InputInterface{
+    box-sizing: content-box;
+}
+.InputToolbar{
+    background-color: var(--HeaderBgColor);
+    height: 60px;
+    width: 100%;
+    padding: 8px 6px;
+    display: flex;
+    justify-content: space-between;
+}
+.InputToolbar button{
+    font-size: 20px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+.InputForm{
+    padding: 2px;
+    height: calc(100% - 48px);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+.InputForm input, .InputForm textarea{
+    font-size: 20px;
+    padding: 10px 4px 2px;
+}
+.InputForm input{
+    height: 52px;
+}
+.InputForm textarea{
+    height: 100%;
+    overflow-y: scroll;
+}
+.InputChild + .InputChild{
+    border-top: 1.6px solid var(--TaskSegregatorColor);
+}
+.UserMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--MaskColor);
+}

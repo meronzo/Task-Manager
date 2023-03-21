@@ -25,6 +25,13 @@ router.post("/post", async (req, res) => {
 })
 
 /*  edit method */
+router.patch("/edit", async (req, res) => {
+    try{
+        
+    }catch{
+
+    }
+})
 
 /*  delete method   */
 

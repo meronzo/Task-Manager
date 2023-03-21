@@ -5,11 +5,15 @@ const TaskSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    year: {
+        type: Number,
+        required: true,
+    },
     month: {
         type: Number,
         required: true,
     },
-    date: {
+    day: {
         type: Number,
         required: true,
     },

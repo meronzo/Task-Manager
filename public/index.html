@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta lang="ja">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,94 +10,139 @@
 
     <!--    Google Font     -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;family=Kanit&amp;display=swap" rel="stylesheet">
 
     <!--    FontAwesome     -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 
-</head>
+    <!--    PWA Manifest    -->
+    <link rel="manifest" href="manifest.json">
 
-<body>
+    <!--    PWA ICONS   -->
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+  </head>
+  <body>
     <div class="Interface">
-        <div class="Header">
-            <span class="HeaderTitle">Task Manager</span>
-        </div>
-        <article class="TasksContainer">
-            <section class="Task">
-                <article class="TaskHeader TaskChild">
-                    <div class="TaskIcon">
-                        <span class="Triangle">▶</span>
-                    </div>
-                    <h3 class="TaskTitle">This is test</h3>
-                    <h4 class="TaskDate">2/12</h4>
-                </article>
-                <article class="TaskContent">
-                    <article class="TaskExplanation TaskChild">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur culpa nobis
-                        doloribus
-                        quos, aspernatur beatae exercitationem numquam quibusdam et dolore molestiae? Eveniet similique
-                        possimus
-                        distinctio non deserunt excepturi necessitatibus.
-                    </article>
-                    <div class="TaskCommands TaskChild">
-                        <button><i class="fa-solid fa-pen"></i></button>
-                        <button><i class="fa-regular fa-trash-can"></i></button>
-                    </div>
-                </article>
-            </section>
-
-            <section class="Task">
-                <article class="TaskHeader TaskChild">
-                    <div class="TaskIcon">
-                        <span class="Triangle">▶</span>
-                    </div>
-                    <h3 class="TaskTitle">Second Header</h3>
-                    <h4 class="TaskDate">2/12</h4>
-                </article>
-                <article class="TaskContent">
-                    <article class="TaskExplanation TaskChild">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur culpa nobis
-                        doloribus
-                        quos, aspernatur beatae exercitationem numquam quibusdam et dolore molestiae? Eveniet similique
-                        possimus
-                        distinctio non deserunt excepturi necessitatibus.
-                    </article>
-                    <div class="TaskCommands TaskChild">
-                        <button><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button><i class="fa-regular fa-trash-can"></i></button>
-                    </div>
-                </article>
-            </section>
-        </article>
+      <div class="Header">
+        <span class="HeaderTitle">Task Manager</span>
+      </div>
+      <article class="TasksContainer">
+        <section class="Task">
+          <article class="TaskHeader TaskChild">
+            <div class="TaskIcon">
+              <span class="Triangle">▶</span>
+            </div>
+            <h3 class="TaskTitle">This is test</h3>
+            <h4 class="TaskDate">2/12</h4>
+          </article>
+          <article class="TaskContent">
+            <article class="TaskExplanation TaskChild">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur culpa nobis
+              doloribus
+              quos, aspernatur beatae exercitationem numquam quibusdam et dolore molestiae? Eveniet similique
+              possimus
+              distinctio non deserunt excepturi necessitatibus.
+            </article>
+            <div class="TaskCommands TaskChild">
+              <button><i class="fa-solid fa-pen"></i></button>
+              <button><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+          </article>
+        </section>
+        <section class="Task">
+          <article class="TaskHeader TaskChild">
+            <div class="TaskIcon">
+              <span class="Triangle">▶</span>
+            </div>
+            <h3 class="TaskTitle">Second Header</h3>
+            <h4 class="TaskDate">2/12</h4>
+          </article>
+          <article class="TaskContent">
+            <article class="TaskExplanation TaskChild">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur culpa nobis
+              doloribus
+              quos, aspernatur beatae exercitationem numquam quibusdam et dolore molestiae? Eveniet similique
+              possimus
+              distinctio non deserunt excepturi necessitatibus.
+            </article>
+            <div class="TaskCommands TaskChild">
+              <button><i class="fa-regular fa-pen-to-square"></i></button>
+              <button><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+          </article>
+        </section>
+      </article>
     </div>
-    
-    
-    <button class="AddTaskButton" onClick="ToggleInputInterface()">＋</button>
-
+    <button class="AddTaskButton" onclick="ToggleInputInterface()">＋</button>
     <div class="InputInterface">
-        <div class="InputToolbar">
-            <button onclick="ToggleInputInterface()" class="InputClose">Close</button>
-            <button onclick="ToggleInputInterface()" type="submit" class="InputSave" form="Form">Save</button>
+      <div class="InputToolbar">
+        <button onclick="ToggleInputInterface()" class="InputClose">Close</button>
+        <button type="submit" class="InputSave" form="Form">Save</button>
+      </div>
+      <form class="InputForm" id="Form">
+        <input class="InputChild" id="Title" placeholder="Title:">
+        <div class="InputChild InputDate">
+          <div class="Date"><input id="Year" type="number" placeholder="1234"></div>
+          <div class="Date"><input id="Month" type="number" placeholder="11"></div>
+          <div class="Date"><input id="Day" type="number" placeholder="01"></div>
         </div>
-        <form class="InputForm" id="Form">
-            <input class="InputChild" id="Title" placeholder="Title:">
-            <input class="InputChild" id="Month" type="number" min="1" max="12" placeholder="Month:">
-            <input class="InputChild" id="Date" type="number" min="1" max="31" placeholder="Date:">
-            <textarea class="InputChild" id="Content" placeholder="Type some explanation.."></textarea>
-        </form>
+        <textarea class="InputChild" id="Content" placeholder="Type some explanation.."></textarea>
+      </form>
     </div>
+    <div class="ErrorContainer"></div>
+
     <!--
     <div class="UserMask"></div>
     -->
 
     <!-- Axios API  -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/db1e596adb.js" crossorigin="anonymous"></script>
-
     <script src="./script.js"></script>
-</body>
 
+    <!--    PWA    Service Worker   -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js').then(reg => {
+          console.log('サービスワーカーを登録しました', reg);
+        }).catch(err => {
+          console.log('登録失敗', err);
+        });
+      }
+    </script>
+  </body>
 </html>
